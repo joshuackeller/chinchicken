@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chin Chicken</title>
+        <link href={% static '/css/styles.css'%} rel="stylesheet" />
+    </head>
+    <body>
+        <div class="navbarContainer">
+            <div class="navbarWrap">
+                <div class="headerWrap">
+                    <a href="/">
+                        <div style="display: flex;">
+                            <div style="margin-right: 10px;">
+                                <img style="height: 40p; width: 40px; " src={% static 'images/ChinChicken.png'%}/>
+                            </div>
+                            <div class="headerTitle" style="margin: auto 0 auto 0">Chin Chicken</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="navbarItems" >
+                    <a class="navbarItem" href={% url 'catering' %}>Catering</a>
+                    <a class="navbarItem" href={% url 'menu' %}>Menu</a>
+                    <a class="altNavbarItem" href={% url 'about' %}>
+                        Learn More
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="caretIcon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="black"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+       
+        {% block content %}
+        {% endblock %}
+   
+
+        <div class="footerContainer">
+            <div>
+                <div class="footerTitle">
+                    Menu
+                    <hr/>
+                </div>
+                <div class="footerItems">
+                    <a class="footerItem" href={% url "menu"%}>
+                        See Menu
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="footerTitle">
+                    Catering
+                    <hr/>
+                </div>
+                <div class="footerItems">
+                    <a class="footerItem" href={%url "catering"%}>
+                        Search Catering Events
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="footerTitle">
+                    Learn More
+                    <hr/>
+                </div>
+                <div class="footerItems">
+                    <a class="footerItem" href={%url "about"%}>
+                        About Us
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
