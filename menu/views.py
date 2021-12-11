@@ -57,7 +57,7 @@ def editMenuItemPageView(request,id):
     menuItem = Menu_Item.objects.get(id=id)
     form = ImageForm(instance=menuItem)
     if request.method == 'POST':
-        form = ImageForm(request.POST or None, instance=menuItem)
+        form = ImageForm(request.POST,request.FILES, instance=menuItem)
         if form.is_valid():
             form.save()
             # Get the current instance object to display in the template
