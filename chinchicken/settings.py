@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-mrr((x%p&ym_49bu@hnq(*#1dswb@%6%$a*)_rm2d+qxueqngg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['chinchicken2.azurewebsites.net']
 
 
 # Application definition
@@ -82,9 +82,9 @@ DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'chinchicken',
-    'USER': 'joshuackeller',
-    'PASSWORD': 'Ak3!Cg2!',
-    'HOST': 'localhost'
+    'USER': 'djangouser',
+    'PASSWORD': 'Password1!',
+    'HOST': 'chinchicken2.postgres.database.azure.com'
     }
 } 
 
